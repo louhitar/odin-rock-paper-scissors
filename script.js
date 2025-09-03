@@ -1,4 +1,3 @@
-// SET variable computerChoice to ""
 let computerChoice = getComputerChoice();
 
 function getComputerChoice() {
@@ -17,5 +16,6 @@ function getComputerChoice() {
             decision = "Scissors";
             break;
     }
+
     return decision;
 }
