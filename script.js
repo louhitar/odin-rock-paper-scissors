@@ -5,19 +5,19 @@ function getComputerChoice() {
     // Generate a random number of 0, 1, or 2
     let randomNum = Math.floor(Math.random() * 3);
     // Assign randomNum rock/paper/scissors based on generated number
-    let decision = "";
+    let computerChoice = "";
     switch (randomNum) {
         case 0:
-            decision = "Rock";
+            computerChoice = "Rock";
             break;
         case 1:
-            decision = "Paper";
+            computerChoice = "Paper";
             break;
         case 2:
-            decision = "Scissors";
+            computerChoice = "Scissors";
             break;
     }
-    return decision;
+    return computerChoice;
 }
 
 function getHumanChoice() {
