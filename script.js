@@ -7,7 +7,7 @@ const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice = "rock") {
+    if (humanChoice == "rock") {
         switch (computerChoice) {
             case "rock":
                 console.log("Tie! Rock matches rock.");
@@ -19,7 +19,7 @@ function playRound(humanChoice, computerChoice) {
                 console.log("You win! Rock beats scissors.");
                 break;
         }
-    } else if (humanChoice = "paper") {
+    } else if (humanChoice == "paper") {
         switch (computerChoice) {
             case "rock":
                 console.log("You win! Paper beats rock.");
@@ -31,7 +31,7 @@ function playRound(humanChoice, computerChoice) {
                 console.log("You lose... Paper is beat by scissors");
                 break;
         }
-    } else if (humanChoice = "scissors") {
+    } else if (humanChoice == "scissors") {
         switch (computerChoice) {
             case "rock":
                 console.log("You lose... Scissors are beat by rock.");
