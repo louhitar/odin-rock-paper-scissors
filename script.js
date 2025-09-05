@@ -7,7 +7,45 @@ const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);
 
 function playRound(humanChoice, computerChoice) {
-    // 
+    if (humanChoice = "rock") {
+        switch (computerChoice) {
+            case "rock":
+                console.log("Tie!");
+                break;
+            case "paper":
+                console.log("You lose...");
+                break;
+            case "scissors":
+                console.log("You win!");
+                break;
+        }
+    } else if (humanChoice = "paper") {
+        switch (computerChoice) {
+            case "rock":
+                console.log("You win!");
+                break;
+            case "paper":
+                console.log("Tie!");
+                break;
+            case "scissors":
+                console.log("You lose...");
+                break;
+        }
+    } else if (humanChoice = "scissors") {
+        switch (computerChoice) {
+            case "rock":
+                console.log("You lose...");
+                break;
+            case "paper":
+                console.log("You win!");
+                break;
+            case "scissors":
+                console.log("Tie!");
+                break;
+        }
+    } else {
+        console.log("I don't understand");
+    }
 }
 
 function getComputerChoice() {
