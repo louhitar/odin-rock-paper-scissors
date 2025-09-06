@@ -1,58 +1,68 @@
-let userScore = 0;
-let computerScore = 0;
+playGame();
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+    let userScore = 0;
+    let computerScore = 0;
 
-playRound(humanSelection, computerSelection);
+    for (let i = 0; i < 5; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
 
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice == "rock") {
-        switch (computerChoice) {
-            case "rock":
-                console.log("Tie! Rock matches rock.");
-                break;
-            case "paper":
-                console.log("You lose... Rock is beat by paper.");
-                computerScore++;
-                break;
-            case "scissors":
-                console.log("You win! Rock beats scissors.");
-                userScore++
-                break;
+        playRound(humanSelection, computerSelection);
+        console.log("User score: " + userScore);
+        console.log("Computer score: " + computerScore);
+    }
+
+    function playRound(humanChoice, computerChoice) {
+        if (humanChoice == "rock") {
+            switch (computerChoice) {
+                case "rock":
+                    console.log("Tie! Rock matches rock.");
+                    break;
+                case "paper":
+                    console.log("You lose... Rock is beat by paper.");
+                    computerScore++;
+                    break;
+                case "scissors":
+                    console.log("You win! Rock beats scissors.");
+                    userScore++
+                    break;
+            }
+        } else if (humanChoice == "paper") {
+            switch (computerChoice) {
+                case "rock":
+                    console.log("You win! Paper beats rock.");
+                    userScore++;
+                    break;
+                case "paper":
+                    console.log("Tie! Paper matches paper.");
+                    break;
+                case "scissors":
+                    console.log("You lose... Paper is beat by scissors");
+                    computerScore++;
+                    break;
+            }
+        } else if (humanChoice == "scissors") {
+            switch (computerChoice) {
+                case "rock":
+                    console.log("You lose... Scissors are beat by rock.");
+                    computerScore++;
+                    break;
+                case "paper":
+                    console.log("You win! Scissors beat paper.");
+                    userScore++;
+                    break;
+                case "scissors":
+                    console.log("Tie! Scissors match scissors.");
+                    break;
+            }
+        } else {
+            console.log("I don't understand");
         }
-    } else if (humanChoice == "paper") {
-        switch (computerChoice) {
-            case "rock":
-                console.log("You win! Paper beats rock.");
-                userScore++;
-                break;
-            case "paper":
-                console.log("Tie! Paper matches paper.");
-                break;
-            case "scissors":
-                console.log("You lose... Paper is beat by scissors");
-                computerScore++;
-                break;
-        }
-    } else if (humanChoice == "scissors") {
-        switch (computerChoice) {
-            case "rock":
-                console.log("You lose... Scissors are beat by rock.");
-                computerScore++;
-                break;
-            case "paper":
-                console.log("You win! Scissors beat paper.");
-                userScore++;
-                break;
-            case "scissors":
-                console.log("Tie! Scissors match scissors.");
-                break;
-        }
-    } else {
-        console.log("I don't understand");
     }
 }
+
+
 
 function getComputerChoice() {
     // Generate a random number of 0, 1, or 2
