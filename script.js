@@ -62,8 +62,6 @@ function playGame() {
     }
 }
 
-
-
 function getComputerChoice() {
     // Generate a random number of 0, 1, or 2
     let randomNum = Math.floor(Math.random() * 3);
